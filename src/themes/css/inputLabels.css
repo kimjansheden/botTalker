@@ -1,0 +1,42 @@
+.input-label-placement-floating .label-text-wrapper,
+.textarea-label-placement-floating .label-text-wrapper {
+    /* margin-bottom: min(10px, 2%); */
+    font-size: 1.5rem;
+}
+
+.input-label-placement-start .label-text-wrapper,
+.toggle-label-placement-start {
+    font-size: 1.5rem;
+    /* background-color: blue; */
+}
+
+/* Label */
+.input-label-placement-floating .native-wrapper {
+    padding-top: min(10px, 2%);
+    font-size: 1.5rem;
+    /* background-color: pink; */
+}
+
+/* Input text */
+.input-wrapper .native-input {
+    font-size: 1.5rem;
+}
+
+/* For smaller screens */
+@media (max-width: 600px) {
+    .input-wrapper .native-input {
+        font-size: 1.25rem;
+    }
+
+    .input-label-placement-start .label-text-wrapper,
+    .toggle-label-placement-start {
+        font-size: 1.25rem;
+    }
+}
+
+/* For very large screens */
+@media (min-width: 1200px) {
+    input {
+        font-size: 1.8rem;
+    }
+}

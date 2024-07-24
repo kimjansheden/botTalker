@@ -1,0 +1,25 @@
+.HamburgerMenu {
+    /* font-size: 2vh; */
+    margin-left: max(1%);
+}
+
+:root .HamburgerMenu {
+    /* Forbid users to select text on mobile devices */
+    /* This is to prevent users selecting all to get annoying, unwanted text from the toolbar */
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.SidebarMenu {
+    /* font-size: 2vh; */
+}
+
+.has-other-icon svg {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-right: 32px;
+    font-size: 1.5em;
+}

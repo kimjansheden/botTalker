@@ -1,0 +1,136 @@
+/* Set a max width for the entire form and center it */
+.post-history {
+	display: flex;
+	flex-direction: column;
+	align-items: normal;
+}
+
+.posts p {
+	display: flex;
+	flex-direction: column;
+	max-width: 100%;
+	padding-bottom: calc(var(--p-size) / 2);
+	white-space: pre-wrap;
+	font-family: monospace, monospace;
+	/* It only works with two monospace for some reason, so ignore warning for now */
+	color: var(--p-color);
+	font-size: var(--p-size);
+	/* background-color: greenyellow; */
+}
+
+.post-item {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	/* background-color: green; */
+}
+
+.post-item ion-label {
+	flex: 1;
+	min-width: 0;
+	white-space: pre-wrap;
+	hyphens: auto;
+	/* background-color: pink; */
+}
+
+@media (min-width: 600px) {
+	.post-item {
+		flex-direction: row;
+		align-items: center;
+		/* background-color: yellow; */
+	}
+
+	.posts p {
+		display: block;
+	}
+
+	.post-item ion-label {
+		margin-left: 10px;
+	}
+
+	.post-history {
+		margin: 0 auto;
+		padding: 16px;
+		/* background-color: yellow; */
+	}
+}
+
+ion-card-title {
+	font-size: var(--h4-size);
+}
+
+.posts h1 {
+	font-size: var(--h1-size);
+}
+
+.posts h2 {
+	font-size: var(--h2-size);
+}
+
+.posts h3 {
+	font-size: var(--h3-size);
+}
+
+.posts h4 {
+	font-size: var(--h4-size);
+}
+
+.posts h5 {
+	font-size: var(--h5-size);
+}
+
+.posts h6 {
+	font-size: var(--h6-size);
+}
+
+.posts h7 {
+	font-size: var(--h7-size);
+}
+
+.posts p strong {
+	font-weight: bold;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.refreshing-icon {
+	animation: spin 1s linear infinite;
+}
+
+@media (max-width: 600px) {
+	.refresh-button {
+		display: none;
+	}
+}
+
+/* Icon animation */
+.move {
+	animation: move 0.5s infinite alternate;
+  }
+  
+  @keyframes move {
+	0% {
+	  transform: translate(0, 0) scale(1);
+	}
+	25% {
+	  transform: translate(-10px, -5px) scale(1.1);
+	}
+	50% {
+	  transform: translate(10px, 5px) scale(0.9);
+	}
+	75% {
+	  transform: translate(-5px, 10px) scale(1.05);
+	}
+	100% {
+	  transform: translate(0, 0) scale(1);
+	}
+  }
+  

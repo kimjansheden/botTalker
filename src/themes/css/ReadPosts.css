@@ -1,0 +1,14 @@
+.pb-container pre,
+.pb-container ion-textarea {
+	max-width: 100%;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	font-size: 1.25rem;
+}
+
+.pb-container ion-textarea, textarea {
+  font-family: monospace, monospace; /*It only works with two monospace for some reason, so ignore warning for now*/
+  font-size: 1.25rem;
+  line-height: 1.5;
+}

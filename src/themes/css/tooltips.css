@@ -1,0 +1,12 @@
+.tool-tip {
+    min-width: fit-content;
+    height: fit-content;
+    padding: 0;
+    font-size: var(--p-size);
+}
+
+@media (max-width: 599.98px) {
+    .tool-tip {
+        padding: 0;
+    }
+}

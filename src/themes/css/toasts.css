@@ -1,0 +1,10 @@
+.toast {
+    font-size: 1.5vw;
+}
+
+@media screen and (max-width: 600px) {
+    .toast {
+        font-size: 1em;
+        max-width: 80%;
+    }
+}

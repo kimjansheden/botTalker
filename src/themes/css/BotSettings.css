@@ -1,0 +1,141 @@
+/* Set a max width for the entire form and center it */
+.settings-form {
+    margin: 0 auto;
+    padding: 16px;
+    /* background-color: green; */
+}
+
+.input-label-placement-start .label-text-wrapper,
+.toggle-label-placement-start .label-text-wrapper,
+.label-text.sc-ion-input-md {
+    hyphens: auto;
+    /* background-color: pink; */
+}
+
+/* Whole line */
+.input-label-placement-start.sc-ion-input-md-h .input-wrapper.sc-ion-input-md,
+.input-wrapper.sc-ion-input-ios {
+    /* flex-direction: row;
+    align-items: flex-start; */
+    /*white-space: normal; */
+    /* background-color: green; */
+    /* min-height: fit-content; */
+}
+
+
+ion-button {
+    margin-right: 1vw;
+}
+
+ion-item {
+    /* color: green; */
+    /* background-color: green; */
+}
+
+ion-item ion-button {
+    /* background-color: yellow; */
+}
+
+/* Toggle Button */
+/* This is pretty much the standard settings. Just included it for future reference. */
+ion-toggle {
+    --track-background: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.39);
+    --track-background-checked: rgba(var(--ion-color-primary-rgb, 56, 128, 255), 0.5);
+    --handle-background: #ffffff;
+    --handle-background-checked: var(--ion-color-primary, #3880ff);
+
+    --handle-width: 20px;
+    --handle-height: 20px;
+    --handle-max-height: calc(100% + 6px);
+    --handle-spacing: 0;
+    --handle-transition: transform 160ms cubic-bezier(0.4, 0, 0.2, 1), background-color 160ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    --handle-border-radius: var(--border-radius);
+    --handle-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
+}
+
+ion-toggle::part(track),
+ion-toggle.toggle-checked::part(track) {
+    height: 14px;
+    width: 36px;
+
+    background: var(--track-background-checked);
+    box-shadow: 2px 2px 2px 1px rgba(var(--ion-color-primary-rgb), 0.2);
+
+    /* Required for iOS handle to overflow the height of the track */
+    overflow: visible;
+}
+
+ion-toggle::part(handle) {
+    /* background: #eb7769; */
+
+    /* border-radius: var(--border-radius); */
+    /* box-shadow: none; */
+}
+
+ion-toggle.toggle-checked::part(handle) {
+    /* background: #95c34e; */
+}
+
+/* End Toggle Button */
+
+@media (max-width:600px) {
+    .settings-form {
+        padding: 0;
+        margin: 0;
+    }
+
+    .input-label-placement-start .label-text-wrapper,
+    .toggle-label-placement-start .label-text-wrapper,
+    .label-text.sc-ion-input-md {
+        /* Allow text to wrap to multiple lines */
+        white-space: normal;
+    }
+
+    ion-item {
+        --padding-start: 0;
+        --inner-padding-top: 0;
+        --inner-padding-bottom: 0px;
+        --inner-margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .input-wrapper,
+    .native-wrapper {
+        /* Allow input fields to scroll horizontally if needed */
+        overflow-x: auto;
+        align-items: flex-start;
+        /* background-color: aqua; */
+        height: fit-content;
+    }
+
+    .input-label-placement-start .label-text-wrapper,
+    .toggle-label-placement-start .label-text-wrapper,
+    .label-text.sc-ion-input-md {
+        align-items: flex-start;
+        height: fit-content;
+    }
+
+    #pb {
+        text-overflow: ellipsis;
+        display: block;
+        width: 30%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
+@media (min-width:600px) {
+
+    .input-label-placement-start .label-text-wrapper,
+    .toggle-label-placement-start .label-text-wrapper,
+    .label-text.sc-ion-input-md {
+        min-width: fit-content;
+    }
+
+    ion-item {
+        flex-direction: row;
+    }
+}

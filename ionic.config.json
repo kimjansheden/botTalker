@@ -1,0 +1,8 @@
+{
+  "name": "FlashbackBot",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite",
+  "id": "d04e96b5"
+}
