@@ -5,16 +5,25 @@ import { readdirSync, statSync } from "fs";
 import { join } from "path";
 
 // Function to recursively get all files in a directory
-function getFiles(dir: string) {
+function getFiles(dir: string): string[] {
   let files: string[] = [];
-  readdirSync(dir).forEach((file) => {
-    const fullPath = join(dir, file);
-    if (statSync(fullPath).isDirectory()) {
-      files = [...files, ...getFiles(fullPath)];
+  try {
+    readdirSync(dir).forEach((file) => {
+      const fullPath = join(dir, file);
+      if (statSync(fullPath).isDirectory()) {
+        files = [...files, ...getFiles(fullPath)];
+      } else {
+        files.push(fullPath);
+      }
+    });
+  } catch (err) {
+    // If directory does not exist, return an empty array
+    if (err.code === 'ENOENT') {
+      return [];
     } else {
-      files.push(fullPath);
+      throw err;
     }
-  });
+  }
   return files;
 }
 

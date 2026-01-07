@@ -270,7 +270,7 @@ export interface AppPage {
   url: string;
   iosIcon: string;
   mdIcon: string;
-  otherIcon?: JSX.Element;
+  otherIcon?: ReactNode;
   title: string;
 }
 

@@ -62,7 +62,7 @@ To build and deploy the project into production on your server, run:
 npm run deploy
 ```
 
-**Note** ou need to implement your own `deploy.sh` script where you enter the commands you need to run for your specific server solution.
+**Note** You need to implement your own `deploy.sh` script where you enter the commands you need to run for your specific server solution.
 
 ### Make deploy.sh executable
 

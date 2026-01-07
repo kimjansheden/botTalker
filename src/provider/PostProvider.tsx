@@ -50,7 +50,7 @@ export const PostProvider: React.FC<{ children: React.ReactNode }> = ({
   const { botPushes } = usePushesContext();
   const { isLoadingPushes, fetchDataAsync } = useFetchPushes();
 
-  const contentRef = useRef<HTMLIonContentElement>(null);
+  const contentRef = useRef<HTMLIonContentElement | null>(null);
 
   // Debug mode state
   const [debugMode, setDebugMode] = useState(false);

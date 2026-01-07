@@ -39,7 +39,7 @@ const CollapsibleSection: React.FC<{
   const { pushBulletApiKey } = useAuth();
   const { presentDangerToast, presentSuccessToast } = useToast();
   const token = pushBulletApiKey;
-  const textareaRef = useRef<HTMLIonTextareaElement>(null);
+  const textareaRef = useRef<HTMLIonTextareaElement | null>(null);
 
   console.log("visibleContent:", visibleContent);
 

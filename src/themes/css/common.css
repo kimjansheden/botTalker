@@ -62,6 +62,11 @@ html.plt-mobile ion-app * {
     user-select: text;
 }
 
+@media screen and (min-width: 600px) {
+    .flex {
+        align-items: center;
+    }
+}
 
 @media (max-width: 599.98px) {
     .flex ion-button {

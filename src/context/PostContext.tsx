@@ -29,7 +29,7 @@ export interface PostContextProps {
   setSelectedFilter: React.Dispatch<React.SetStateAction<string>>;
   debugMode: boolean;
   toggleDebugMode: () => void;
-  contentRef: React.RefObject<HTMLIonContentElement>;
+  contentRef: React.RefObject<HTMLIonContentElement | null>;
 }
 
 export const PostContext = createContext<PostContextProps | undefined>(

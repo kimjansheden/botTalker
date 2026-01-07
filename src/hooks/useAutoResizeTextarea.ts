@@ -1,7 +1,7 @@
 import { useEffect, RefObject } from "react";
 
 const useAutoResizeTextarea = (
-  textareaRef: RefObject<HTMLIonTextareaElement>,
+  textareaRef: RefObject<HTMLIonTextareaElement | null>,
   editedContent: string,
   isVisible: boolean
 ) => {
