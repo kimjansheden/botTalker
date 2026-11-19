@@ -41,16 +41,16 @@
     "@types/qrcode": "^1.5.5",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
-    "@vitejs/plugin-legacy": "^4.0.2",
-    "@vitejs/plugin-react": "^4.0.1",
+    "@vitejs/plugin-legacy": "^8.2.4",
+    "@vitejs/plugin-react": "^4.7.0",
     "cypress": "^13.11.0",
     "eslint": "^8.35.0",
     "eslint-plugin-react": "^7.32.2",
     "jsdom": "^22.1.0",
     "terser": "^5.31.2",
     "typescript": "^5.5.2",
-    "vite": "^4.3.9",
-    "vitest": "^0.32.2"
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1"
   },
   "description": "FlashbackBot"
 }
